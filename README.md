@@ -1,0 +1,1 @@
+# intellij-class-usages-analysis
