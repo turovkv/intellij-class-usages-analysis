@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 
 
-def show_rank_metrics(df_group: pd.DataFrame, df_proba: pd.DataFrame, df_true: pd.DataFrame):
+def show_rank_metrics(df_group: pd.DataFrame, df_proba: pd.DataFrame, df_true: pd.DataFrame, label=''):
+    print(label)
     df_metric = pd.concat([df_group, df_proba, df_true], axis=1)
     df_metric = df_metric.sort_values(by=['group', 'proba', 'correct'], ascending=[True, False, True])
     print(df_metric.shape)
