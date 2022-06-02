@@ -28,6 +28,9 @@ def show_rank_metrics(df_group: pd.DataFrame, df_proba: pd.DataFrame, df_true: p
     for i, c in enumerate(count):
         acc += c
         print(f'top{i} = {acc / sum_all}')
+        if i > 15:
+            print(f'stop {i}')
+            break
     print()
 
 #  example
